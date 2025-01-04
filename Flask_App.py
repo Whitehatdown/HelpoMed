@@ -22,7 +22,7 @@ app.config['SESSION_USE_SIGNER'] = True
 
 # Configure Flask-Mail settings
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
+app.config['MAIL_PORT'] = 3306
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = 'pms.write@gmail.com'
 app.config['MAIL_PASSWORD'] = 'iwhchxznwifqddkv'
@@ -34,10 +34,10 @@ mysql = MySQL(app)
 mail = Mail(app)
 
 # MySQL Configuration
-app.config['MYSQL_HOST'] = 'pranikmedicalservices.mysql.pythonanywhere-services.com'
-app.config['MYSQL_USER'] = 'pranikmedicalser'
-app.config['MYSQL_PASSWORD'] = 'pms@1504'
-app.config['MYSQL_DB'] = 'pranikmedicalser$default'
+app.config['MYSQL_HOST'] = 'shrirangsavale.mysql.pythonanywhere-services.com'
+app.config['MYSQL_USER'] = 'shrirangsavale'
+app.config['MYSQL_PASSWORD'] = 'DevelopUS@123'
+app.config['MYSQL_DB'] = 'shrirangsavale$HelpoMed'
 
 
 

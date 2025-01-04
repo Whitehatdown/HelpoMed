@@ -1,4 +1,4 @@
-Database Name: pms
+Database Name: HelpoMed
 
 
 Create Tables 
@@ -23,7 +23,7 @@ CREATE TABLE registered_admins ( Admin_ID VARCHAR(30), Email VARCHAR(255) NOT NU
 
 - Madatory to register atleast 1 admin, for accesing admin portal and able to add more admin after login
 
-INSERT INTO registered_admins (Name, Email, Phone, Password, Admin_ID, Profile_URL, Qualification, Job_Profile) VALUES("Nikhil Yadav", "yadavnikhilrao@gmail.com", '9027800200', "Nikhil1234", "CEONIKHIL04", "CEONIKHIL04.png", "MCA", "Data Scientist");
+INSERT INTO registered_admins (Name, Email, Phone, Password, Admin_ID, Profile_URL, Qualification, Job_Profile) VALUES("Shrirang Savale DevelopUS", "sshrirang29@gmail.com", '8459843535', "DevelopUS@123", "CEOSHRIRANG", "CEOSHRIRANG.png", "Btech-CSE IIIT Nagpur", "Data Scientist and GenAI Researcher");
 
 
 4. appointments
@@ -58,3 +58,125 @@ Table Name: appointments
 
 Attributes: Patient_ID, Doctor_ID, Appointment_Date, Appointment_Time, Insurance, Reason, Symptoms, Created_at
 
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+ -- Switch to the database HelpoMed
+USE `shrirangsavale$HelpoMed`;
+
+-- 1. Create registered_patients table
+CREATE TABLE registered_patients (
+    Patient_ID VARCHAR(240),
+    Email VARCHAR(240) PRIMARY KEY,
+    Name VARCHAR(240),
+    Date_of_Birth VARCHAR(40),
+    Blood_Group VARCHAR(12),
+    Phone VARCHAR(14),
+    Password VARCHAR(40),
+    Profile_URL VARCHAR(30),
+    Address VARCHAR(240),
+    City VARCHAR(240),
+    State VARCHAR(240),
+    Pin_Code VARCHAR(240),
+    Country VARCHAR(240)
+);
+
+-- 2. Create registered_doctors table
+CREATE TABLE registered_doctors (
+    Doctor_ID VARCHAR(30),
+    Email VARCHAR(240) PRIMARY KEY,
+    Name VARCHAR(240),
+    Phone VARCHAR(12),
+    Gender VARCHAR(7),
+    Password VARCHAR(240),
+    Qualification VARCHAR(240),
+    Specialization VARCHAR(240),
+    Profile_URL VARCHAR(30),
+    Clinic_Name VARCHAR(240),
+    Clinic_Address VARCHAR(240),
+    About_Clinic TEXT,
+    Address_Line1 TEXT,
+    Address_Line2 TEXT,
+    City VARCHAR(240),
+    State VARCHAR(240),
+    Registration_Number VARCHAR(240),
+    Year VARCHAR(10),
+    Fee INT
+);
+
+-- 3. Create registered_admins table
+CREATE TABLE registered_admins (
+    Admin_ID VARCHAR(30),
+    Email VARCHAR(255) NOT NULL,
+    Name VARCHAR(255) NOT NULL,
+    Phone VARCHAR(20) NOT NULL,
+    Password VARCHAR(255) NOT NULL,
+    Profile_URL VARCHAR(255),
+    Qualification VARCHAR(255),
+    Job_Profile VARCHAR(255),
+    Address VARCHAR(255),
+    City VARCHAR(255),
+    State VARCHAR(255),
+    Pin_Code VARCHAR(10),
+    Country VARCHAR(255),
+    PRIMARY KEY (Email)
+);
+
+-- Insert mandatory admin entry
+INSERT INTO registered_admins (
+    Name, Email, Phone, Password, Admin_ID, Profile_URL, Qualification, Job_Profile
+) 
+VALUES (
+    "Shrirang Savale DevelopUS", 
+    "sshrirang29@gmail.com", 
+    "8459843535", 
+    "DevelopUS@123", 
+    "CEOSHRIRANG", 
+    "CEOSHRIRANG.png", 
+    "Btech-CSE IIIT Nagpur", 
+    "Data Scientist and GenAI Researcher"
+);
+
+INSERT INTO registered_doctors (
+    Doctor_ID,
+    Email,
+    Name,
+    Phone,
+    Gender,
+    Password,
+    Qualification,
+    Specialization,
+    Profile_URL,
+    Clinic_Name,
+    Clinic_Address,
+    About_Clinic,
+    Address_Line1,
+    Address_Line2,
+    City,
+    State,
+    Registration_Number,
+    Year,
+    Fee
+)
+VALUES (
+    "Shrirang Savale DevelopUS", 
+    "sshrirang29@gmail.com", 
+    "8459843535", 
+    "DevelopUS@123", 
+    "CEOSHRIRANG", 
+    "CEOSHRIRANG.png", 
+    "Btech-CSE IIIT Nagpur", 
+    "Data Scientist and GenAI Researcher"
+);
+
+-- 4. Create appointments table
+CREATE TABLE appointments (
+    Patient_ID VARCHAR(25),
+    Doctor_ID VARCHAR(25),
+    Appointment_Date DATE,
+    Appointment_Time TIME,
+    Insurance VARCHAR(10),
+    Reason TEXT,
+    Symptoms VARCHAR(255),
+    Created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
