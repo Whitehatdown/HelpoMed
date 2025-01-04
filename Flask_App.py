@@ -22,7 +22,7 @@ app.config['SESSION_USE_SIGNER'] = True
 
 # Configure Flask-Mail settings
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 3306
+app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = 'pms.write@gmail.com'
 app.config['MAIL_PASSWORD'] = 'iwhchxznwifqddkv'
