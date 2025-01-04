@@ -1,0 +1,43 @@
+Flask==2.3.3
+Flask-WTF==1.1.1
+Flask-SQLAlchemy==3.0.5
+Flask-Migrate==4.0.4
+WTForms==3.0.1
+Flask-Login==0.6.3
+
+# Database-related dependencies (you can remove if you're not using a MySQL database)
+Flask-MySQLdb==1.0.1    # For MySQL, modify if using a different MySQL connector
+
+# For interacting with databases (optional)
+SQLAlchemy==2.0.5
+psycopg2-binary==2.9.7  # For PostgreSQL, remove if unused
+mysqlclient==2.2.1      # For MySQL, remove if unused
+pymysql==1.1.0          # Alternative MySQL adapter
+
+# Additional packages that might be used
+Jinja2==3.1.2           # Template rendering
+gunicorn==20.1.0        # WSGI HTTP server for deployment
+
+# For handling file uploads and secure filenames
+Werkzeug==2.3.4         # For `secure_filename`
+
+# Flask-Mail for sending emails
+Flask-Mail==0.9.1       # For sending emails through Flask
+
+# Data Science stack (if needed)
+numpy==1.24.2
+pandas==2.1.1
+scikit-learn==1.2.2
+matplotlib==3.7.1
+seaborn==0.12.2
+scipy==1.11.1
+statsmodels==0.14.0
+
+# Utility for environment variables
+python-dotenv==1.0.0
+
+# Optional: For email security/validation (in case you use it)
+Flask-Mail==0.9.1
+
+# For generating random strings, handling dates
+secrets==5.0.0        # Used for generating cryptographically strong random numbers
